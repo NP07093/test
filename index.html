@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宜蘭三天兩夜行程規畫</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <p class="eyebrow">Yilan Trip Planner</p>
+      <h1>宜蘭三天兩夜行程規畫</h1>
+      <p class="subtitle">
+        依照你的旅遊偏好，快速切換適合的宜蘭玩法：慢活療癒、親子同遊、戶外山海、美食放鬆。
+      </p>
+    </header>
+
+    <main class="layout">
+      <aside class="panel controls">
+        <h2>選擇旅遊條件</h2>
+
+        <div class="field-group">
+          <label for="style">行程路線</label>
+          <select id="style">
+            <option value="relax">1. 慢活療癒</option>
+            <option value="family">2. 親子同遊</option>
+            <option value="outdoor">3. 戶外山海</option>
+            <option value="food">4. 美食放鬆</option>
+            <option value="senior">5. 長者輕鬆遊</option>
+            <option value="couple">6. 情侶約會</option>
+            <option value="friends">7. 朋友出遊</option>
+            <option value="culture">8. 文青手作</option>
+            <option value="budget">9. 小資省錢</option>
+            <option value="rainy">10. 雨天備案</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="transport">交通方式</label>
+          <select id="transport">
+            <option value="train">大眾運輸</option>
+            <option value="car">自行開車</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="budget">預算區間</label>
+          <select id="budget">
+            <option value="economy">精省型</option>
+            <option value="mid">舒適型</option>
+            <option value="premium">享受型</option>
+          </select>
+        </div>
+
+        <button id="recommendBtn" class="primary-btn">產生推薦行程</button>
+
+        <section class="tips">
+          <h3>規畫小提醒</h3>
+          <ul>
+            <li>週末熱門景點建議提早出發，避開車潮。</li>
+            <li>若安排太平山、抹茶山，建議準備雨具與保暖衣物。</li>
+            <li>住宿可優先考慮礁溪、羅東，交通與覓食都方便。</li>
+            <li>本頁共提供 10 條三天兩夜路線，可依同行成員快速挑選。</li>
+          </ul>
+        </section>
+      </aside>
+
+      <section class="panel result-panel">
+        <div class="summary" id="summary"></div>
+        <div id="itinerary" class="itinerary"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
