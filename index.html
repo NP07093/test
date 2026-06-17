@@ -3,78 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>宜蘭三天兩夜行程規畫</title>
+  <title>ONEPIECEREAL｜ACE DONUTS 線上訂單</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <header class="hero">
-      <p class="eyebrow">Yilan Trip Planner</p>
-      <h1>宜蘭三天兩夜行程規畫</h1>
-      <p class="subtitle">
-        依照你的旅遊偏好，快速切換適合的宜蘭玩法：慢活療癒、親子同遊、戶外山海、美食放鬆。
-      </p>
+  <div class="page-shell">
+    <header class="hero-banner">
+      <div class="hero-copy">
+        <p class="brand-kicker">ONEPIECEREAL ONLINE ORDER</p>
+        <h1>ACE DONUTS 艾斯甜甜圈</h1>
+        <p class="hero-subtitle">把海報菜單做成線上版訂單，一口選出屬於你的冒險甜甜圈。</p>
+        <div class="hero-tags">
+          <span>艾斯限定系列</span>
+          <span>經典甜甜圈</span>
+          <span>飲品搭配</span>
+          <span>冒險套餐</span>
+        </div>
+      </div>
+      <div class="hero-highlight">
+        <p class="highlight-label">店長推薦 No.1</p>
+        <h2>Nika 甜甜圈</h2>
+        <p>金黃芒果、鳳梨、百香果與香草卡士達的航海系熱帶口味。</p>
+        <strong>NT$95</strong>
+      </div>
     </header>
 
-    <main class="layout">
-      <aside class="panel controls">
-        <h2>選擇旅遊條件</h2>
+    <main class="order-layout">
+      <section class="menu-area">
+        <section class="menu-section featured-section">
+          <div class="section-heading">
+            <p class="section-kicker">SIGNATURE</p>
+            <h2>艾斯限定系列</h2>
+          </div>
+          <div class="card-grid featured-grid" id="featuredMenu"></div>
+        </section>
 
-        <div class="field-group">
-          <label for="style">行程路線</label>
-          <select id="style">
-            <option value="relax">1. 慢活療癒</option>
-            <option value="family">2. 親子同遊</option>
-            <option value="outdoor">3. 戶外山海</option>
-            <option value="food">4. 美食放鬆</option>
-            <option value="senior">5. 長者輕鬆遊</option>
-            <option value="couple">6. 情侶約會</option>
-            <option value="friends">7. 朋友出遊</option>
-            <option value="culture">8. 文青手作</option>
-            <option value="budget">9. 小資省錢</option>
-            <option value="rainy">10. 雨天備案</option>
-          </select>
-        </div>
+        <section class="menu-section">
+          <div class="section-heading">
+            <p class="section-kicker">CLASSIC DONUTS</p>
+            <h2>經典系列</h2>
+          </div>
+          <div class="card-grid" id="classicMenu"></div>
+        </section>
 
-        <div class="field-group">
-          <label for="transport">交通方式</label>
-          <select id="transport">
-            <option value="train">大眾運輸</option>
-            <option value="car">自行開車</option>
-          </select>
-        </div>
+        <section class="menu-section drinks-section">
+          <div class="section-heading">
+            <p class="section-kicker">DRINKS</p>
+            <h2>飲品搭配</h2>
+          </div>
+          <div class="drink-list" id="drinkMenu"></div>
+        </section>
+      </section>
 
-        <div class="field-group">
-          <label for="budget">預算區間</label>
-          <select id="budget">
-            <option value="economy">精省型</option>
-            <option value="mid">舒適型</option>
-            <option value="premium">享受型</option>
-          </select>
-        </div>
+      <aside class="order-panel">
+        <section class="panel-block intro-block">
+          <p class="section-kicker">SET MENU</p>
+          <h2>冒險套餐</h2>
+          <p>任選甜甜圈 2 個 + 飲品 1 杯 = <strong>NT$149</strong></p>
+          <label class="toggle-row">
+            <input type="checkbox" id="setToggle" />
+            <span>我要套用冒險套餐優惠</span>
+          </label>
+        </section>
 
-        <button id="recommendBtn" class="primary-btn">產生推薦行程</button>
+        <section class="panel-block customer-block">
+          <h3>訂購資訊</h3>
+          <div class="field-group">
+            <label for="customerName">訂購人姓名</label>
+            <input id="customerName" type="text" placeholder="例如：魯夫" />
+          </div>
+          <div class="field-group">
+            <label for="pickupTime">取餐時段</label>
+            <select id="pickupTime">
+              <option>11:00 - 12:00</option>
+              <option>12:00 - 13:00</option>
+              <option>13:00 - 14:00</option>
+              <option>14:00 - 15:00</option>
+              <option>15:00 - 16:00</option>
+              <option>16:00 - 17:00</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="note">備註</label>
+            <textarea id="note" rows="3" placeholder="例如：少冰、生日祝福、先做飲料"></textarea>
+          </div>
+        </section>
 
-        <section class="tips">
-          <h3>規畫小提醒</h3>
-          <ul>
-            <li>週末熱門景點建議提早出發，避開車潮。</li>
-            <li>若安排太平山、抹茶山，建議準備雨具與保暖衣物。</li>
-            <li>住宿可優先考慮礁溪、羅東，交通與覓食都方便。</li>
-            <li>本頁共提供 10 條三天兩夜路線，可依同行成員快速挑選。</li>
-          </ul>
+        <section class="panel-block summary-block">
+          <h3>訂單摘要</h3>
+          <div id="orderSummary" class="order-summary"></div>
+          <div class="price-box">
+            <div><span>甜甜圈小計</span><strong id="donutSubtotal">NT$0</strong></div>
+            <div><span>飲品小計</span><strong id="drinkSubtotal">NT$0</strong></div>
+            <div><span>套餐折抵</span><strong id="discountAmount">-NT$0</strong></div>
+            <div class="total-row"><span>應付總額</span><strong id="grandTotal">NT$0</strong></div>
+          </div>
+          <button id="submitOrder" class="primary-btn">送出 ONEPIECEREAL 訂單</button>
+          <p id="orderMessage" class="order-message"></p>
         </section>
       </aside>
-
-      <section class="panel result-panel">
-        <div class="summary" id="summary"></div>
-        <div id="itinerary" class="itinerary"></div>
-      </section>
     </main>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
